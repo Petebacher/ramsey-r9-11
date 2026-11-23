@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this graph, please cite it as below."
+title: "R(9,11) >= 618: a 617-vertex Ramsey graph"
+authors:
+  - family-names: Chrisbacher
+    given-names: Peter J.
+date-released: 2026-11-23
+license: CC-BY-4.0
+abstract: "A graph on 617 vertices with no K9 and no independent set of size 11, improving the lower bound for the Ramsey number R(9,11) from 617 to 618. Built by survey item 2.3.h from Google Research's R(9,11) >= 617 graph with a larger common induced subgraph (18 vertices instead of 17), and checked by two independently written exact programs."
+keywords: [Ramsey numbers, lower bounds, graph construction]
