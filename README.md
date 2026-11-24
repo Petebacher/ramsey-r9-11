@@ -111,7 +111,7 @@ This work was directed by Peter J. Chrisbacher. The search, construction and che
 
 ## How to cite
 
-See `CITATION.cff`, or cite the Zenodo record for this repository (the concept DOI 10.5281/zenodo.24477512 covers all versions; each version has its own DOI).
+See `CITATION.cff`, or cite the Zenodo record for this repository (the concept DOI 10.5281/zenodo.24477511 covers all versions; version 1.0 is 10.5281/zenodo.24477512 and version 1.1 is 10.5281/zenodo.24510998).
 
 ---
 
