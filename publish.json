@@ -1,0 +1,11 @@
+{
+  "repo": "ramsey-r9-11",
+  "title": "R(9,11) >= 620: a 619-vertex Ramsey graph",
+  "description": "<p>A graph on 619 vertices with no K<sub>9</sub> and no independent set of size 11. It raises the lower bound for the Ramsey number R(9,11) to 620. This version also keeps the earlier R(9,11) lower bound 618 graph as history.</p><p>It is built by Theorem 3 of Xu, Shao and Radziszowski (SIAM J. Discrete Math. 25 (2011)) from blocks of Google Research's R(9,11) graph, with a larger common induced subgraph of 20 vertices and a valid split found by search. The hypotheses are machine-checked, and the finished graph is checked directly by independently written exact programs.</p>",
+  "version": "1.1",
+  "creators": [{"name": "Chrisbacher, Peter J."}],
+  "license": "cc-by-4.0",
+  "upload_type": "dataset",
+  "keywords": ["Ramsey numbers", "lower bounds", "R(9,11)", "graph construction", "gluing construction"],
+  "release_notes": "v1.1 adds R(9,11) >= 620 (619-vertex graph), by Theorem 3 of Xu, Shao and Radziszowski (2011) with a new 20-vertex common part and split. R(9,11) >= 618 from v1.0 is superseded and kept as history.\nIncludes the pairing and split file, a standard-library rebuild, a hypothesis verifier, exact checkers and reproduce.sh."
+}

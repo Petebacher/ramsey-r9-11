@@ -1,0 +1,13 @@
+PASS  1. F is 619 x 619, symmetric, zero diagonal; n(F) = 564 + 35 + 20
+PASS  2a. G block = rows and columns 0..563 of the Google file
+PASS  2c. H block = rows and columns 564..598 of the Google file
+PASS  3a. the G-H edges are exactly the 20 matching edges u_i -- v_i
+PASS  3b. each z_i has exactly the neighbours N_G(u_i) in G and N_H(v_i) in H (so it is not joined to u_i or v_i)
+PASS  4. G[U] = H[V] entry by entry under u_i -> v_i; M has 20 vertices and 140 edges
+PASS  5. Z = M[W1] + M[W2] with no W1-W2 edge; |W1| = 14, |W2| = 6, both nonempty
+PASS  6. for every v outside Wi, M[Wi + v] has no K_8: largest clique found 7 (W1) and 5 (W2), need at most 7
+      (clique number of M itself: 8; survey item 2.3.h would need at most 7)
+PASS  7. H is a (9,3)-graph: clique number 8 (need < 9), independence number 2 (need < 3)
+PASS  8. counting: n(G) + n(H) + n(M) = 564 + 35 + 20 = 619 = n(F); s + t - 1 = 9 + 3 - 1 = 11
+NOT CHECKED HERE: G has no K_9 and no independent 9-set (see README, checks table)
+ALL HYPOTHESES VERIFIED. If G is a (9,9)-graph, Theorem 3 gives R(9,11) >= 620.

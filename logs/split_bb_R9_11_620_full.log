@@ -1,0 +1,4 @@
+n=619 n1=564 symmetry/diagonal errors=0
+K_9 exists: no (nodes 84110586)
+independent 11-set exists: no (small-part independent sets enumerated 1334, nodes 11452390026)
+PASS: R(9,11) >= 620

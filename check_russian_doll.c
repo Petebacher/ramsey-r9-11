@@ -34,7 +34,7 @@ static void expand(bs *cand, int size, int target){
   }
 }
 int main(int argc,char**argv){
-  if(argc<4){fprintf(stderr,"usage: rdollg graph.txt T c|i\n");return 2;}
+  if(argc<4){fprintf(stderr,"usage: check_russian_doll graph.txt T c|i\n");return 2;}
   T=atoi(argv[2]);
   FILE*f=fopen(argv[1],"r"); if(!f){perror("open");return 2;}
   static int vals[MAXN*MAXN]; long m=0; int ch;
@@ -52,7 +52,9 @@ int main(int argc,char**argv){
   }
   printf("n=%d edges=%ld symmetric_and_zero_diag=%s\n",n,edges,bad?"NO":"yes");
   if(bad) return 1;
-  if(argv[3][0]=='c'){ for(int i=0;i<n;i++){bs t=adj[i];adj[i]=nadj[i];nadj[i]=t;} printf("MODE clique: searching for a clique of size T (complement independence)\n"); } else printf("MODE independent set of size T\n");
+  int cmode = (argv[3][0]=='c');
+  const char *what = cmode ? "clique number" : "independence number";
+  if(cmode){ for(int i=0;i<n;i++){bs t=adj[i];adj[i]=nadj[i];nadj[i]=t;} printf("MODE clique: searching for a clique of size T (complement independence)\n"); } else printf("MODE independent set of size T\n");
   /* K4: for each edge u<v, common neighbours w>v, need an edge inside them */
   long k4=0;
   if(n<=300)
@@ -63,7 +65,7 @@ int main(int argc,char**argv){
       for(int z=w+1;z<n;z++) if(x.w[z/64]>>(z%64)&1) k4++;
     }
   }
-  printf("K4 count: %ld\n",k4);
+  if(n<=300) printf("K4 count: %ld\n",k4); else printf("K4 count: skipped (n > 300)\n");
   clock_t t0=clock();
   /* Russian doll: c[i] is computed for i = n-1 down to 0, with the exact max in vertices i..n-1 */
   int best=0;
@@ -77,7 +79,7 @@ int main(int argc,char**argv){
     c[i]=best;
     if(best>=T) break;
   }
-  printf("independence number %s %d (target %d)  nodes=%lld  cpu=%.1fs\n", best>=T?">=":"=", best, T, nodes, (double)(clock()-t0)/CLOCKS_PER_SEC);
-  printf("independent set of size %d exists: %s\n", T, best>=T?"YES":"no");
+  printf("%s %s %d (target %d)  nodes=%lld  cpu=%.1fs\n", what, best>=T?">=":"=", best, T, nodes, (double)(clock()-t0)/CLOCKS_PER_SEC);
+  printf("%s of size %d exists: %s\n", cmode?"clique":"independent set", T, best>=T?"YES":"no");
   return 0;
 }

@@ -1,4 +1,7 @@
-rebuilt.txt
+rebuilt*.txt
 out_*.txt
 check_russian_doll
 check_branch_bound
+check_enumerate
+check_split_branch_bound
+G564.txt

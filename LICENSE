@@ -1,4 +1,4 @@
-Code (build.py, check_russian_doll.c, check_branch_bound.c, reproduce.sh): MIT License
+Code (build.py, verify_theorem3.py, check_russian_doll.c, check_branch_bound.c, check_split_branch_bound.c, check_enumerate.c, reproduce.sh): MIT License
 
 Copyright (c) 2026 Peter J. Chrisbacher
 
@@ -15,11 +15,12 @@ WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEM
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-The graph R9_11_618.txt, common_part_m18.txt and README.md: Creative Commons Attribution 4.0 International (CC BY 4.0),
-https://creativecommons.org/licenses/by/4.0/ . Please credit Peter J. Chrisbacher and cite this repository.
-R9_11_618.txt contains two parts of Google's graph unchanged, as induced subgraphs: rows 0 to 563 and rows 564 to 598
-of Google's file. The edges between those two parts and the last 18 vertices are new. Google's 17 edges between the
-parts and Google's last 17 vertices are not included.
+The graphs R9_11_620.txt and R9_11_618.txt, the files common_part_m18.txt and theorem3_R9_11_620.txt, and README.md:
+Creative Commons Attribution 4.0 International (CC BY 4.0), https://creativecommons.org/licenses/by/4.0/ .
+Please credit Peter J. Chrisbacher and cite this repository.
+R9_11_620.txt and R9_11_618.txt contain two parts of Google's graph unchanged, as induced subgraphs: rows 0 to 563 and
+rows 564 to 598 of Google's file. The edges between those two parts and the new vertices are new. Google's own edges
+between the parts and Google's last 17 vertices are not included.
 
 input_google_R9_11_617.txt: Copyright Google LLC, from https://github.com/google-research/google-research
 (ramsey_number_bounds/improved_bounds/R(9, 11) >= 617.txt, commit 0d94f8c), redistributed unchanged (renamed) with

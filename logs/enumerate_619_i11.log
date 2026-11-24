@@ -1,0 +1,15 @@
+file=t3_9_619_s11.txt
+n=619 edges=85935 symmetric=yes zero_diag=yes mode=independent sets T=11 threads=24
+number of independent sets of size 1: 619
+number of independent sets of size 2: 105336
+number of independent sets of size 3: 7020824
+number of independent sets of size 4: 217579216
+number of independent sets of size 5: 3338829438
+number of independent sets of size 6: 25738775210
+number of independent sets of size 7: 99447333794
+number of independent sets of size 8: 181705158620
+number of independent sets of size 9: 133970558026
+number of independent sets of size 10: 29994093590
+number of independent sets of size 11: 0
+wall=121.3s
+RESULT: independent set of size 11 exists: no
